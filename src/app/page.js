@@ -232,8 +232,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-[188.84px] h-9 bg-[#FF6900] rounded-full">
-            Load More Listings
+          <div className="w-7xl flex justify-center">
+            <div className="w-[188.84px] h-9 bg-[#FF6900] rounded-full flex justify-center items-center text-white">
+              Load More Listings
+            </div>
           </div>
         </div>
       </div>
