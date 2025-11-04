@@ -135,31 +135,48 @@ export default function Home() {
           <div className="rounded-1 flex flex-col gap-6 border border-gray-300 rounded-[14px]">
             <img
               className="w-full h-48 rounded-[14px]"
-              src="/App (3).png"
+              src="/ImageWithFallback.png"
             ></img>
             <div className="w-full h-38 pl-3 flex flex-col gap-2">
-              <p className="text-[#FF6900]">$216,000</p>
-              <p>Piney Hills</p>
+              <p className="text-[#FF6900]">$450,000</p>
+              <p>River Oak</p>
               <div className="flex gap-1 items-center">
                 <img src="/Icon.png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">4 Bedrooms</p>
+                <p className="text-[14px] text-[#4A5565]">3 Bedrooms</p>
               </div>
               <div className="flex gap-1 items-center">
                 <img src="/Icon (1).png" className="w-4 h-4"></img>
                 <p className="text-[14px] text-[#4A5565]">2 Bathrooms</p>
                 <img src="/Icon (2).png"></img>
-                <p className="text-[14px] text-[#4A5565]">2,150 sqft</p>
+                <p className="text-[14px] text-[#4A5565]">1,800 sqft</p>
+              </div>
+            </div>
+          </div>
+          <div className="rounded-1 flex flex-col gap-6 border border-gray-300 rounded-[14px]">
+            <img className="w-full h-48 rounded-[14px]" src="/Apt 3.png"></img>
+            <div className="w-full h-38 pl-3 flex flex-col gap-2">
+              <p className="text-[#FF6900]">$318,000</p>
+              <p>Maple Glen</p>
+              <div className="flex gap-1 items-center">
+                <img src="/Icon.png" className="w-4 h-4"></img>
+                <p className="text-[14px] text-[#4A5565]">5 Bedrooms</p>
+              </div>
+              <div className="flex gap-1 items-center">
+                <img src="/Icon (1).png" className="w-4 h-4"></img>
+                <p className="text-[14px] text-[#4A5565]">3 Bathrooms</p>
+                <img src="/Icon (2).png"></img>
+                <p className="text-[14px] text-[#4A5565]">2,850 sqft</p>
               </div>
             </div>
           </div>
           <div className="rounded-1 flex flex-col gap-6 border border-gray-300 rounded-[14px]">
             <img
               className="w-full h-48 rounded-[14px]"
-              src="/App (3).png"
+              src="/ImageWithFallback (1).png"
             ></img>
             <div className="w-full h-38 pl-3 flex flex-col gap-2">
-              <p className="text-[#FF6900]">$216,000</p>
-              <p>Piney Hills</p>
+              <p className="text-[#FF6900]">$325,000</p>
+              <p>Forest Hill</p>
               <div className="flex gap-1 items-center">
                 <img src="/Icon.png" className="w-4 h-4"></img>
                 <p className="text-[14px] text-[#4A5565]">4 Bedrooms</p>
@@ -168,67 +185,47 @@ export default function Home() {
                 <img src="/Icon (1).png" className="w-4 h-4"></img>
                 <p className="text-[14px] text-[#4A5565]">2 Bathrooms</p>
                 <img src="/Icon (2).png"></img>
-                <p className="text-[14px] text-[#4A5565]">2,150 sqft</p>
+                <p className="text-[14px] text-[#4A5565]">2,200 sqft</p>
               </div>
             </div>
           </div>
           <div className="rounded-1 flex flex-col gap-6 border border-gray-300 rounded-[14px]">
             <img
               className="w-full h-48 rounded-[14px]"
-              src="/App (3).png"
+              src="/ImageWithFallback (2).png"
             ></img>
             <div className="w-full h-38 pl-3 flex flex-col gap-2">
-              <p className="text-[#FF6900]">$216,000</p>
-              <p>Piney Hills</p>
+              <p className="text-[#FF6900]">$295,000</p>
+              <p>Cedar Park</p>
               <div className="flex gap-1 items-center">
                 <img src="/Icon.png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">4 Bedrooms</p>
+                <p className="text-[14px] text-[#4A5565]">3 Bedrooms</p>
               </div>
               <div className="flex gap-1 items-center">
                 <img src="/Icon (1).png" className="w-4 h-4"></img>
                 <p className="text-[14px] text-[#4A5565]">2 Bathrooms</p>
                 <img src="/Icon (2).png"></img>
-                <p className="text-[14px] text-[#4A5565]">2,150 sqft</p>
+                <p className="text-[14px] text-[#4A5565]">1,650 sqft</p>
               </div>
             </div>
           </div>
           <div className="rounded-1 flex flex-col gap-6 border border-gray-300 rounded-[14px]">
             <img
               className="w-full h-48 rounded-[14px]"
-              src="/App (3).png"
+              src="/ImageWithFallback (3).png"
             ></img>
             <div className="w-full h-38 pl-3 flex flex-col gap-2">
-              <p className="text-[#FF6900]">$216,000</p>
-              <p>Piney Hills</p>
+              <p className="text-[#FF6900]">$425,000</p>
+              <p>Willow Creek</p>
               <div className="flex gap-1 items-center">
                 <img src="/Icon.png" className="w-4 h-4"></img>
                 <p className="text-[14px] text-[#4A5565]">4 Bedrooms</p>
               </div>
               <div className="flex gap-1 items-center">
                 <img src="/Icon (1).png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">2 Bathrooms</p>
+                <p className="text-[14px] text-[#4A5565]">3 Bathrooms</p>
                 <img src="/Icon (2).png"></img>
-                <p className="text-[14px] text-[#4A5565]">2,150 sqft</p>
-              </div>
-            </div>
-          </div>
-          <div className="rounded-1 flex flex-col gap-6 border border-gray-300 rounded-[14px]">
-            <img
-              className="w-full h-48 rounded-[14px]"
-              src="/App (3).png"
-            ></img>
-            <div className="w-full h-38 pl-3 flex flex-col gap-2">
-              <p className="text-[#FF6900]">$216,000</p>
-              <p>Piney Hills</p>
-              <div className="flex gap-1 items-center">
-                <img src="/Icon.png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">4 Bedrooms</p>
-              </div>
-              <div className="flex gap-1 items-center">
-                <img src="/Icon (1).png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">2 Bathrooms</p>
-                <img src="/Icon (2).png"></img>
-                <p className="text-[14px] text-[#4A5565]">2,150 sqft</p>
+                <p className="text-[14px] text-[#4A5565]">2,650 sqft</p>
               </div>
             </div>
           </div>
@@ -236,6 +233,23 @@ export default function Home() {
             <div className="w-[188.84px] h-9 bg-[#FF6900] rounded-full flex justify-center items-center text-white">
               Load More Listings
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-[1440px] h-[686px] bg-[#F9FAFB] flex justify-center pt-10 pb-10 gap-10">
+        <div className="w-[1280px] h-[686px] flex flex-col items-center">
+          <div className="w-[1065px] h-[100px] flex flex-col items-center">
+            <div className="h-[60px] text-[20px] flex flex-col items-center">
+              <p>Meet the People</p>
+              <p>Behind the Process</p>
+            </div>
+            <p className="text=[16px] text-[#4A5565] top-[46px] relative">
+              Our experienced team is dedicated to helping you find your perfect
+              home
+            </p>
+          </div>
+          <div className="grid grid-col-<4> w-[1280px] h-[390px] gap-6">
+            <div className="w-[302px] h-[390px] rounded-[14px] border border-gray-300"></div>
           </div>
         </div>
       </div>
