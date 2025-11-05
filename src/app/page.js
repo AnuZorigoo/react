@@ -1,4 +1,83 @@
 import Image from "next/image";
+import { Buttons } from "./_components/Button";
+
+const data = [
+  {
+    image: "/ImageWithFallback (4).png",
+    name: "Micheal Chen",
+    occupation: "Senior Real Estate Agent",
+    NumberOfPropertiesSold: 24,
+  },
+  {
+    image: "/ImageWithFallback (5).png",
+    name: "David Martinez",
+    occupation: "Property Specialist",
+    NumberOfPropertiesSold: 18,
+  },
+  {
+    image: "/ImageWithFallback (6).png",
+    name: "James Wilson",
+    occupation: "Investment Advisor",
+    NumberOfPropertiesSold: 32,
+  },
+  {
+    image: "/ImageWithFallback (7).png",
+    name: "Robert Thompson",
+    occupation: "Luxury Home Expert",
+    NumberOfPropertiesSold: 28,
+  },
+];
+
+const house = [
+  {
+    image: "/App (3).png",
+    price: "$216000",
+    name: "Piney Hills",
+    bedroom: 4,
+    bathroom: 2,
+    size: 2150,
+  },
+  {
+    image: "/ImageWithFallback.png",
+    price: "$450,000",
+    name: "River Oak",
+    bedroom: 3,
+    bathroom: 2,
+    size: 1800,
+  },
+  {
+    image: "/App (4).png",
+    price: "$318,000",
+    name: "Maple Glen",
+    bedroom: 5,
+    bathroom: 3,
+    size: 2850,
+  },
+  {
+    image: "/ImageWithFallback (1).png",
+    price: "$325,000",
+    name: "Forest Hill",
+    bedroom: 4,
+    bathroom: 2,
+    size: 2200,
+  },
+  {
+    image: "/ImageWithFallback (2).png",
+    price: "$295,000",
+    name: "Cedar Park",
+    bedroom: 3,
+    bathroom: 2,
+    size: 1650,
+  },
+  {
+    image: "/ImageWithFallback (3).png",
+    price: "$425,000",
+    name: "Willow Creek",
+    bedroom: 4,
+    bathroom: 3,
+    size: 2650,
+  },
+];
 
 export default function Home() {
   return (
@@ -35,9 +114,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="h-9 w-[140.34px] bg-[#FF6900] flex justify-center items-center text-white rounded-lg text-[14px]">
-          Get Started
-        </div>
+        <Buttons name="Get Started" />
       </div>
       <div className="w-screen bg-[#F9FAFB] flex flex-col items-center">
         <div className="w-7xl h-[474px] flex flex-col gap-12 pt-10 pb-10 bg-[#F9FAFB]">
@@ -112,123 +189,40 @@ export default function Home() {
           </div>
         </div>
         <div className="w-7xl h-[764px] grid grid-cols-3 grid-rows-2 gap-7 justify-center">
-          <div className="rounded-1 flex flex-col gap-6 border border-gray-300 rounded-[14px]">
-            <img
-              className="w-full h-48 rounded-[14px]"
-              src="/App (3).png"
-            ></img>
-            <div className="w-full h-38 pl-3 flex flex-col gap-2">
-              <p className="text-[#FF6900]">$216,000</p>
-              <p>Piney Hills</p>
-              <div className="flex gap-1 items-center">
-                <img src="/Icon.png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">4 Bedrooms</p>
+          {house.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="rounded-1 flex flex-col gap-6 border border-gray-300 rounded-[14px]"
+              >
+                <img
+                  className="w-full h-48 rounded-[14px]"
+                  src={item.image}
+                ></img>
+                <div className="w-full h-38 pl-3 flex flex-col gap-2">
+                  <p className="text-[#FF6900]">{item.price}</p>
+                  <p>{item.name}</p>
+                  <div className="flex gap-1 items-center">
+                    <img src="/Icon.png" className="w-4 h-4"></img>
+                    <p className="text-[14px] text-[#4A5565]">
+                      {item.bedroom} Bedrooms
+                    </p>
+                  </div>
+                  <div className="flex gap-1 items-center">
+                    <img src="/Icon (1).png" className="w-4 h-4"></img>
+                    <p className="text-[14px] text-[#4A5565]">
+                      {item.bathroom} Bathrooms
+                    </p>
+                    <img src="/Icon (2).png"></img>
+                    <p className="text-[14px] text-[#4A5565]">
+                      {item.size}sqft
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="flex gap-1 items-center">
-                <img src="/Icon (1).png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">2 Bathrooms</p>
-                <img src="/Icon (2).png"></img>
-                <p className="text-[14px] text-[#4A5565]">2,150 sqft</p>
-              </div>
-            </div>
-          </div>
-          <div className="rounded-1 flex flex-col gap-6 border border-gray-300 rounded-[14px]">
-            <img
-              className="w-full h-48 rounded-[14px]"
-              src="/ImageWithFallback.png"
-            ></img>
-            <div className="w-full h-38 pl-3 flex flex-col gap-2">
-              <p className="text-[#FF6900]">$450,000</p>
-              <p>River Oak</p>
-              <div className="flex gap-1 items-center">
-                <img src="/Icon.png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">3 Bedrooms</p>
-              </div>
-              <div className="flex gap-1 items-center">
-                <img src="/Icon (1).png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">2 Bathrooms</p>
-                <img src="/Icon (2).png"></img>
-                <p className="text-[14px] text-[#4A5565]">1,800 sqft</p>
-              </div>
-            </div>
-          </div>
-          <div className="rounded-1 flex flex-col gap-6 border border-gray-300 rounded-[14px]">
-            <img className="w-full h-48 rounded-[14px]" src="/Apt 3.png"></img>
-            <div className="w-full h-38 pl-3 flex flex-col gap-2">
-              <p className="text-[#FF6900]">$318,000</p>
-              <p>Maple Glen</p>
-              <div className="flex gap-1 items-center">
-                <img src="/Icon.png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">5 Bedrooms</p>
-              </div>
-              <div className="flex gap-1 items-center">
-                <img src="/Icon (1).png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">3 Bathrooms</p>
-                <img src="/Icon (2).png"></img>
-                <p className="text-[14px] text-[#4A5565]">2,850 sqft</p>
-              </div>
-            </div>
-          </div>
-          <div className="rounded-1 flex flex-col gap-6 border border-gray-300 rounded-[14px]">
-            <img
-              className="w-full h-48 rounded-[14px]"
-              src="/ImageWithFallback (1).png"
-            ></img>
-            <div className="w-full h-38 pl-3 flex flex-col gap-2">
-              <p className="text-[#FF6900]">$325,000</p>
-              <p>Forest Hill</p>
-              <div className="flex gap-1 items-center">
-                <img src="/Icon.png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">4 Bedrooms</p>
-              </div>
-              <div className="flex gap-1 items-center">
-                <img src="/Icon (1).png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">2 Bathrooms</p>
-                <img src="/Icon (2).png"></img>
-                <p className="text-[14px] text-[#4A5565]">2,200 sqft</p>
-              </div>
-            </div>
-          </div>
-          <div className="rounded-1 flex flex-col gap-6 border border-gray-300 rounded-[14px]">
-            <img
-              className="w-full h-48 rounded-[14px]"
-              src="/ImageWithFallback (2).png"
-            ></img>
-            <div className="w-full h-38 pl-3 flex flex-col gap-2">
-              <p className="text-[#FF6900]">$295,000</p>
-              <p>Cedar Park</p>
-              <div className="flex gap-1 items-center">
-                <img src="/Icon.png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">3 Bedrooms</p>
-              </div>
-              <div className="flex gap-1 items-center">
-                <img src="/Icon (1).png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">2 Bathrooms</p>
-                <img src="/Icon (2).png"></img>
-                <p className="text-[14px] text-[#4A5565]">1,650 sqft</p>
-              </div>
-            </div>
-          </div>
-          <div className="rounded-1 flex flex-col gap-6 border border-gray-300 rounded-[14px]">
-            <img
-              className="w-full h-48 rounded-[14px]"
-              src="/ImageWithFallback (3).png"
-            ></img>
-            <div className="w-full h-38 pl-3 flex flex-col gap-2">
-              <p className="text-[#FF6900]">$425,000</p>
-              <p>Willow Creek</p>
-              <div className="flex gap-1 items-center">
-                <img src="/Icon.png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">4 Bedrooms</p>
-              </div>
-              <div className="flex gap-1 items-center">
-                <img src="/Icon (1).png" className="w-4 h-4"></img>
-                <p className="text-[14px] text-[#4A5565]">3 Bathrooms</p>
-                <img src="/Icon (2).png"></img>
-                <p className="text-[14px] text-[#4A5565]">2,650 sqft</p>
-              </div>
-            </div>
-          </div>
+            );
+          })}
+
           <div className="w-7xl flex justify-center">
             <div className="w-[188.84px] h-9 bg-[#FF6900] rounded-full flex justify-center items-center text-white">
               Load More Listings
@@ -236,21 +230,80 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-[1440px] h-[686px] bg-[#F9FAFB] flex justify-center pt-10 pb-10 gap-10">
-        <div className="w-[1280px] h-[686px] flex flex-col items-center">
-          <div className="w-[1065px] h-[100px] flex flex-col items-center">
-            <div className="h-[60px] text-[20px] flex flex-col items-center">
+      <div className="flex flex-col bg-[#F9FAFB] w-screen  h-[686px]  items-center">
+        <div className="w-7xl pt-10 pb-10 flex flex-col items-center gap-10">
+          <div className="w-[1065px] h-25">
+            <div className="text-[20px] flex flex-col items-center">
               <p>Meet the People</p>
               <p>Behind the Process</p>
             </div>
-            <p className="text=[16px] text-[#4A5565] top-[46px] relative">
+            <p className="flex justify-center text-[16px] text-[#4A5565] pt-4">
               Our experienced team is dedicated to helping you find your perfect
               home
             </p>
           </div>
-          <div className="grid grid-col-<4> w-[1280px] h-[390px] gap-6">
-            <div className="w-[302px] h-[390px] rounded-[14px] border border-gray-300"></div>
+
+          <div className="grid grid-cols-4 grid-rows-1 gap-6 w-7xl h-[390px]">
+            {data.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="w-[302px] h-[390px] border border-gray-300 rounded-[14px]"
+                >
+                  <img className="rounded-t-[14px]" src={item.image}></img>
+                  <div className="flex flex-col gap-1 pt-4 pl-4 pr-4 items-center h-27">
+                    <p className="text-[16px]">{item.name}</p>
+                    <p className="text-[#4A5565] text-[14px]">
+                      {item.occupation}
+                    </p>
+                    <p className="text-[#FF6900] text-[14px]">
+                      {item.NumberOfPropertiesSold} Properties Sold
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
+          <Buttons name="Meet the team" />
+        </div>
+      </div>
+      <div className="flex gap-8">
+        <div className="w-[333.6640625px] h-[152px] flex flex-col items-center gap-4">
+          <img src="/Container (4).png" className="w-16 h-16"></img>
+          <p className="text-[16px] ">Find your dream home for life</p>
+          <p className="text-[14px] text-[#4A5565] text-center">
+            Browse thousands of properties and find the perfect place
+          </p>
+        </div>
+        <div className="w-[333.6640625px] h-[152px] flex flex-col items-center gap-4">
+          <img src="/Container (5).png" className="w-16 h-16"></img>
+          <p className="text-[16px] ">Pre-Approved Loan $1 to $5</p>
+          <p className="text-[14px] text-[#4A5565] text-center">
+            Get pre-approved quickly and know your budget
+          </p>
+        </div>
+        <div className="w-[333.6640625px] h-[152px] flex flex-col items-center gap-4">
+          <img src="/Container (6).png" className="w-16 h-16"></img>
+          <p className="text-[16px] ">Commission free for life</p>
+          <p className="text-[14px] text-[#4A5565] text-center">
+            Save thousands with our commission-free model
+          </p>
+        </div>
+      </div>
+      <div className="w-screen h-[260px] bg-[#101828] pt-10 pb-10 flex flex-col gap-6 items-center">
+        <div className="h-12 text-white text-center text-[16px]">
+          <p>The Only Market Update</p>
+          <p>You'll Actually Want to Read</p>
+        </div>
+        <p className="text-[16px] text-[#99A1AF] text-center">
+          Get weekly insights on the real estate market, new listings, and
+          expert tips delivered to your inbox
+        </p>
+        <div className="flex gap-3">
+          <div className="text-[#717182] w-[305.484375px] h-9 bg-[#FFFFFF] rounded-lg flex items-center pl-2">
+            Enter your email
+          </div>
+          <Buttons name="Subscribe" />
         </div>
       </div>
     </div>
